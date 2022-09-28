@@ -7,29 +7,29 @@ from helpers.filters import command, other_filters2
 
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start_(client: Client, message: Message):
-    await message.reply_sticker("CAACAgQAAxkBAAI8bmKIvgnlJyCrq9HIxSvCZCbm5CEjAAIaEAACpvFxHg-Z648-SCRWJAQ")
+    await message.reply_sticker("CAACAgQAAxkBAAFQ1RJjD7AxlAABNFT6vMX7dEWPRYc5Wb4AAisIAAKyLFBTLR1rbk_qRUIpBA")
     await message.reply_text(
-      f"""**{bot} Sizi Salamlıyır👋🏻\n\nℹ️Mən Səsli Söhbətlərdə Musiqi Oxuya Bilən Bir Botam\n\n✅Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin**
+      f"""**⚡️ Salam mən @Rexxuxxnxx tərəfindən marağa yaradılmış musiqi botuyam\n\n Əmrlərimi görmək üçün əmrlər butonuna tıklayın**
       """,
          reply_markup
          =InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "✅ Məni öz qrubuna əlavə et ✅", url=f"https://t.me/LegendMucisBot?startgroup=true"
+                        "🥇 Məni öz qrubuna əlavə et", url=f"https://t.me/LorddMusicBot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🧔🏻Sahibim", url="https://t.me/ElnurGenCeLi"
+                        "🦅 Sahibim", url="https://t.me/Rexxuxxnxx"
                     ),
                     InlineKeyboardButton(
-                        "🇦🇿Rəsmi Kanal", url="https://t.me/SecretMMC"
+                        "🇦🇿Rəsmi Kanal", url="https://t.me/LordBots"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "💡 Əmrlər" , callback_data= "cbhelp"
+                        "🇦🇿 Əmrlər" , callback_data= "cbhelp"
                     )
                 ]
                 
@@ -49,7 +49,7 @@ async def help(_, message: Message):
                          "ℹ️ Bütün Əmrlərim", callback_data="admin")
                  ],[
                      InlineKeyboardButton(
-                         "✅ Məlumatlarım", callback_data="herkes")
+                         "❤️‍🔥 Məlumatlarım", callback_data="herkes")
                  ],[
                      InlineKeyboardButton(
                          "⬅️ Geri Qayıt", callback_data="cbstart")
@@ -70,7 +70,7 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "✅ Məlumatlarım",callback_data ="herkes")
+            "❤️‍🔥 Məlumatlarım",callback_data ="herkes")
         ],
         [
           InlineKeyboardButton(
@@ -82,7 +82,7 @@ async def cbbilgi(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("herkes"))
 async def herkes(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Hələ Hazır Deyiləm😁</b>""",
+    await query.edit_message_text(f"""<b>Go < @lorddchatt😁</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -96,7 +96,7 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("admin"))
 async def admin(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}! Bu botun hərkəs üçün əmr menyusu 😉\n\n/play - Musiqi oxutmaq üçün youtube url'sinə vəya musiqi dosyasına yanıt verin.▶️\n/song  - İstədiyiniz musiqi sürətli bir şəkildə axtarın.🎵\n/vsong - İstədiyiniz videoları sürətli bir şəkildə axtarın.🔍\n\nBu botun adminlər üçün əmr menyusu ✅\n\n/pause - Musiqini dayandır.⏸️\n/resume - Musiqini dəvam etdir.▶️\n/end - Musiqini Bitir.⏹\n/skip - Musiqini keç.⏩\n/ses - Səsi 0-200 arasi dəyiş\n/reload - Botu yenidən başlad.🔄\n/asistan - Musiqi asistanı qrupunuza qoşulur.⚪\n\nSahiblər Və Sudo Üçün Əmirlər Menyusu\n\n/yetkiver - Yetki ver.🔼\n/yetkial - Yetki al.🔽\n/reklam - Bot Olduğu Butur Qrublarda Reklam Edər💸\n/restart - Botu Serverdən Yenidən Başlad🔄\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}! Bu botun hərkəs üçün əmr menyusu 😉\n\n/play - Musiqi oxutmaq üçün youtube url'sinə vəya musiqi dosyasına yanıt verin.▶️\n/song  - İstədiyiniz musiqi sürətli bir şəkildə axtarın.🎵\n/vsong - İstədiyiniz videoları sürətli bir şəkildə axtarın.🔍\n\nBu botun adminlər üçün əmr menyusu ✅\n\n/pause - Musiqini dayandır.⏸️\n/resume - Musiqini dəvam etdir.▶️\n/end - Musiqini Bitir.⏹\n/skip - Musiqini keç.⏩\n/volume - Səsi 0-200 arasi dəyiş\n/reload - Botu yenidən başlad.🔄\n/asistan - Musiqi asistanı qrupunuza qoşulur.⚪\n\nSahiblər Və Sudo Üçün Əmirlər Menyusu\n\n/auth - Yetki ver.🔼\n/unauth - Yetki al.🔽\n/reklam - Bot Olduğu Butur Qrublarda Reklam Edər💸\n/restart - Botu Serverdən Yenidən Başlad🔄\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -110,25 +110,25 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**{bot} Sizi Salamlıyır👋🏻\n\nℹ️Mən Səsli Söhbətlərdə Musiqi Oxuya Bilən Bir Botam\n\n✅Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin**""",
+    await query.edit_message_text(f"""**⚡️ Salam mən @Rexxuxxnxx tərəfindən marağa yaradılmış musiqi botuyam\n\n Əmrlərimi görmək üçün əmrlər butonuna tıklayın**""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "✅ Məni öz qrubuna əlavə et ✅", url=f"https://t.me/LegendMucisBot?startgroup=true"
+                        "🥇 Məni öz qrubuna əlavə et ", url=f"https://t.me/LorddMusicBot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🧔🏻Sahibim", url="https://t.me/ElnurGenCeLi"
+                        "🦅 Sahibim", url="https://t.me/Rexxuxxnxx"
                     ),
                     InlineKeyboardButton(
-                        "🇦🇿Rəsmi Kanal", url="https://t.me/SecretMMC"
+                        "🇦🇿Rəsmi Kanal", url="https://t.me/LordBots"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "💡 Əmrlər", callback_data= "cbhelp"
+                        "⚡️ Əmrlər", callback_data= "cbhelp"
                     )
                 ]
                 
